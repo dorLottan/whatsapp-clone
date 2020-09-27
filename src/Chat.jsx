@@ -109,7 +109,7 @@ const Chat = () => {
         </div>
         {messages.map(message => (
           <p
-            key={message.timestamp.toString() + message.message}
+            key={message.timestamp + message.message}
             className={`chat__message ${
               message.name === user.displayName && 'chat__reciever'
             }`}
@@ -117,7 +117,7 @@ const Chat = () => {
             <span className="chat__name">{message.name}</span>
             {message.message}
             <span className="chat__timestamp">
-              <div style={{ display: 'none' }}>
+              <span style={{ display: 'none' }}>
                 {
                   (minutes =
                     parseInt(
@@ -175,7 +175,7 @@ const Chat = () => {
                         hour +
                         parseInt(clientGMT))
                 }
-              </div>
+              </span>
               {hourly ? hourly % 12 : '00'}
               {' : '}
               {minutes !== 0 ? (minutes < 10 ? '0' + minutes : minutes) : '00'}
