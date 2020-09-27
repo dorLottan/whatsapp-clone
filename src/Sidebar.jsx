@@ -4,7 +4,7 @@ import SidebarChat from './SidebarChat';
 import './Sidebar.css';
 import { IconButton, Avatar } from '@material-ui/core';
 import { useStateValue } from './StateProvider';
-import { SearchOutlined, MoreVert, DonutLarge, Chat } from '@material-ui/icons';
+import { SearchOutlined, MoreVert, DonutLarge } from '@material-ui/icons';
 
 const Sidebar = () => {
   const [rooms, setRooms] = useState([]);
@@ -71,7 +71,6 @@ const Sidebar = () => {
           />
         </div>
       </div>
-      {console.log(sidebarBool)}
       {sidebarBool ? (
         <div className="sidebar__chats">
           <SidebarChat addNewChat />

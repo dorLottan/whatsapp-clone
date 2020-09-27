@@ -33,7 +33,7 @@ const SidebarChat = ({ addNewChat, id, name }) => {
 
   const deleteRoom = () => {
     const passwordVerify = prompt('Enter Admin Password to delete Room');
-    if (passwordVerify == 123) {
+    if (passwordVerify === 123) {
       db.collection('rooms')
         .doc(id)
         .delete()
