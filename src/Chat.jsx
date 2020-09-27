@@ -109,7 +109,7 @@ const Chat = () => {
         </div>
         {messages.map(message => (
           <p
-            key={message.id}
+            key={message.timestamp.toString() + message.message}
             className={`chat__message ${
               message.name === user.displayName && 'chat__reciever'
             }`}
