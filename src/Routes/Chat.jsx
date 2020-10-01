@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import db from './firebase';
+import db from '../firebase';
 import firebase from 'firebase';
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../StateProvider';
 import './Chat.css';
 import { IconButton, Avatar } from '@material-ui/core';
 import {

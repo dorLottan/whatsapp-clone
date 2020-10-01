@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import './App.css';
-import Chat from './Chat';
+import Chat from './Routes/Chat';
 import Sidebar from './Sidebar';
 import Login from './Login';
 import NoChat from './NoChat';
